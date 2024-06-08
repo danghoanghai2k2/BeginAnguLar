@@ -1,0 +1,17 @@
+npm install angular -g  cài angular 
+npm install -g @angular/cli cài angular cli global
+ng new <tên của dự án > tạo dự án mới 
+ng serve --open mở server lên 
+
+
+cấu hình typescript
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    ...
+  },
+  ...
+}
