@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, HeaderComponent, FormsModule],
   templateUrl: './ng-iF-for.component.html',
   styleUrl: './ng-iF-for.component.css',
-  
 })
 export class NgIngForComponent {
   age: number = 15;

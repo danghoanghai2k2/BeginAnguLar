@@ -1,5 +1,5 @@
 <h1>ghép các component vào với nhau </h1>
-<h1>SỬ DỤNG NGFOR VS NGIF  VS [NGCLASS]</h1>
+<h1>DANH SÁCH TẤT CẢ LÀ </h1>
 <table>
     <thead>
       <tr>
@@ -23,7 +23,6 @@
               <td>{{item.date}}</td>
               <td>{{item.address}}</td>
               <td>{{item.discount}}</td>
-              <!-- CÁCH SỬ DỤNG CSS SELECTER TRONG [NGCLASS] -->
               <td [ngClass]="{'discounts' : item.discount <= 0}">không giảm giá </td>
           </tr>
       </ng-container>
