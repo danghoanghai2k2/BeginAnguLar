@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Logo styles */
+.logo h1 {
+    font-size: 24px;
+}
+
+/* Navigation styles */
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Search bar styles */
+.search input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+}

@@ -1,0 +1,22 @@
+<header>
+    <div class="logo">
+        <h1>{{infor}}</h1>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="search">
+        <input type="text" placeholder="infor" [(ngModel)]="infor"> <!-- Corrected the syntax for ngModel -->
+        
+        <input type="text" placeholder="infor" [value]="infor"> <!-- Used property binding for value -->
+        <div class="btnSubmet"><button (click)="resetAll();">Click me</button></div>
+    </div>
+    
+</header>
+<!-- có thể gọi thẻ này bất kì đâu mà người dùng muốn gọi  -->
+ 

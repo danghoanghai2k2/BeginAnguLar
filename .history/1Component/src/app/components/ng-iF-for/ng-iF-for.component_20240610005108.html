@@ -1,0 +1,40 @@
+<h1>HỌC VỀ *ngIf="expression"</h1>
+<h1>cách 1</h1>
+<form action="" method="get">
+    <label for="expression">Nhập biểu thức:</label><br><br>
+    <input type="text" id="expression" name="expression" value=""><br><br>
+    <p *ngIf="age>= 15">Bạn trên 15 tuổi !!!!</p>
+    <p *ngIf="age < 15">Bạn dưới 15 tuổi !!!!</p>
+</form>
+<h1>Học về ng template</h1>
+<h1>cách 2 </h1>
+<div *ngIf="age >= 13; else noPG13">Bạn có thể xem nội dung PG-13</div>
+<ng-template #noPG13>
+  <div>Bạn không thể xem nội dung PG-13</div>
+</ng-template>
+<!-- <h1>cách 3 </h1>
+<div *ngIf="age >= 13; then Dung else Sai">
+    <ng-template #Dung>Bạn còn trẻ quá</ng-template>
+    <ng-template #Sai>Bạn đã trưởng thành</ng-template>
+</div> -->
+<h1>HỌC VỀ SWITCH</h1>
+<div [ngSwitch]="name">
+    <div *ngSwitchCase="'admin'">
+        <p>Bạn chọn vào phần admin</p>
+        <!-- có thể cho cả thẻ component vào trong đó -->
+        <app-header></app-header>
+    </div>
+    <div *ngSwitchCase="'user'">
+        <p>Bạn chọn vào phần user</p>
+    </div>
+    <div *ngSwitchCase="'hai'">
+        <p>Bạn chọn vào phần ĐẶNG THANH HẢI</p>
+    </div>
+    <div *ngSwitchDefault>Bạn cần dữ liệu hợp lý </div>
+</div>
+
+<h1>học về *ngFor="let item of list"</h1>
+<div class="leanNgFor" *ngFor="let fruit of fruits; let i = index">
+    <div class="itemNgFor">{{fruit}}</div>
+    <div class="itemNgFor">{{i}},{{fruits}}</div>
+</div>

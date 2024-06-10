@@ -1,0 +1,74 @@
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- phần này mình dùng ngFor và ngIf để truy xuấ dữ liệu -->
+     <!-- muốn dùng hì phải inport CommoModule -->
+      
+    <ng-container *ngFor="let item of user" > 
+        <!-- dùng ng-container để lồng ngFor vs ngIF -->
+        <tr *ngIf="item.id >= 3">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.date}}</td>
+            <td>{{item.address}}</td>
+        </tr>
+    </ng-container>
+  </tbody>
+</table>
+
+<table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- phần này mình dùng ngFor và ngIf để truy xuấ dữ liệu -->
+       <!-- muốn dùng hì phải inport CommoModule -->
+        
+      <ng-container  > 
+          <!-- dùng ng-container để lồng ngFor vs ngIF -->
+          <tr *ngFor="let item of user">
+              <td>{{item.id}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.date}}</td>
+              <td>{{item.address}}</td>
+          </tr>
+      </ng-container>
+    </tbody>
+  </table>
+<div class="caculater">
+    <input type="number" name="" [(ngModel)]="number1" id="">
+    <br>
+    <br>
+    <input type="number" name="" [(ngModel)]="number2" id="">
+    <select id="operation" [(ngModel)]="operations">
+        <option value="add">+</option>
+        <option value="subtract">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+      </select>
+      <div>
+        <button (click)="calculate(operations)">Calculate</button>
+      </div>
+      <div *ngIf="result !== null">
+        <h2>Result: {{ result }}</h2>
+      </div>
+      <div *ngIf="result === null && operations === 'divide' && number2 === 0">
+        <h2>Division by zero is not allowed</h2>
+      </div>
+</div>

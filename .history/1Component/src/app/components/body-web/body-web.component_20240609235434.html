@@ -1,0 +1,28 @@
+<h1>ghép các component vào với nhau </h1>
+<h1>DANH SÁCH TẤT CẢ LÀ </h1>
+<table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- phần này mình dùng ngFor và ngIf để truy xuấ dữ liệu -->
+       <!-- muốn dùng hì phải inport CommoModule -->
+        
+      <ng-container  > 
+          <!-- dùng ng-container để lồng ngFor vs ngIF -->
+          <tr *ngFor="let item of user">
+              <td>{{item.id}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.date}}</td>
+              <td>{{item.address}}</td>
+          </tr>
+      </ng-container>
+    </tbody>
+  </table>

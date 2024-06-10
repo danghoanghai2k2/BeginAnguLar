@@ -12,8 +12,3 @@ cấu hình typescript
   },
   ...
 }
-
-MUỐN DÙNG THÌ INPORT componentModul
-[(ngModel)] ="code" :  là phương thức lấy dữ liệu input vào
-*ngIf = "code" : là đk giống if
-*ngFor = "let item of user" : là đk giống for

@@ -1,0 +1,12 @@
+
+<app-header></app-header>
+<app-body-web></app-body-web>
+<app-body-web></app-body-web>
+<app-footer></app-footer>
+<div class="search">
+    <input type="text" placeholder="infor" [(ngModel)]="infor"> <!-- Corrected the syntax for ngModel -->
+    
+    <input type="text" placeholder="infor" [value]="infor"> <!-- Used property binding for value -->
+    <div class="btnSubmet"><button (click)="resetAll();">Click me</button></div>
+</div>
+<h1>{{infor}}</h1>
